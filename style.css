@@ -168,9 +168,25 @@ h2 {
     display: flex;
     gap: 10px;
 }
+.project-logos-small {
+    display: flex;
+    gap: 10px;
+}
+@media (min-width: 1006px){
+.project-logos-small img {
+    height: 25px;
+    opacity: 0.8;
+}
+}
+@media (max-width: 1006px){
+.project-logos-small img {
+    height: 40px;
+    opacity: 0.8;
+}
+}
 
 .project-logos img {
-    height: 25px;
+    height: 40px;
     opacity: 0.8;
 }
 
@@ -284,7 +300,7 @@ h2 {
 }
 
 /* Responsive Tweaks */
-@media (max-width: 768px) {
+@media (max-width: 680px) {
 
     /* ✅ Larger text for mobile */
     body {
@@ -327,4 +343,14 @@ h2 {
     .contact-info p {
         font-size: 1.15rem;
     }
+    .card img {
+    height: 50px;
+}
+
+.project-logos img {
+    height: 60px;
+}
+.project-logos-small img {
+    height: 60px;
+}
 }
