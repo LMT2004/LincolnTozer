@@ -30,7 +30,7 @@ nav {
 }
 
 nav a {
-    color: #38bdf8; /* Sky Blue */
+    color: #38bdf8;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
@@ -160,7 +160,7 @@ h2 {
 }
 
 .project-actions {
-    margin-top: 0; /* override old spacing */
+    margin-top: 0;
 }
 
 /* Logos */
@@ -223,19 +223,6 @@ h2 {
     color: inherit;
 }
 
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-    .profile-body {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .project-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-}
 /* Contact Section */
 .contact-card {
     background: #1e293b;
@@ -252,10 +239,12 @@ h2 {
     flex-wrap: wrap;
 }
 
+/* 🔥 Larger contact text on ALL sizes */
 .contact-info p {
     margin-bottom: 8px;
     color: #f1f5f9;
-    font-size: 0.95rem;
+    font-size: 1.05rem;   /* increased */
+    font-weight: 500;
 }
 
 .contact-actions {
@@ -284,7 +273,7 @@ h2 {
     box-shadow: 0 6px 15px rgba(56,189,248,0.35);
 }
 
-/* Optional LinkedIn variant */
+/* LinkedIn variant */
 .contact-btn.linkedin {
     background: #0a66c2;
     color: white;
@@ -292,4 +281,50 @@ h2 {
 
 .contact-btn.linkedin:hover {
     background: #004182;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+
+    /* ✅ Larger text for mobile */
+    body {
+        font-size: 1.05rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .project-card p {
+        font-size: 1rem;
+    }
+
+    .profile-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .contact-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* 🔥 Even larger contact text on mobile */
+    .contact-info p {
+        font-size: 1.15rem;
+    }
 }
