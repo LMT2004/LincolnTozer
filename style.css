@@ -354,6 +354,10 @@ h2 {
     height: 60px;
 }
 nav {
-    gap: 10px;
+    gap: 9px;
 }
+nav a{
+    font-size: 15px
+}
+
 }
