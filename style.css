@@ -353,4 +353,7 @@ h2 {
 .project-logos-small img {
     height: 60px;
 }
+nav {
+    gap: 10px;
+}
 }
