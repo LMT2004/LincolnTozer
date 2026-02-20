@@ -68,14 +68,14 @@
     </div>
   </div>
 
-  <div class="content">
+<div class="content">
     <h1 id="projects">Projects</h1>
-    <h2>Click a card to access Github</h2>
+    <h2>Click card to view source code. Source code for NBCC projects available only on request</h2>
 
     <div class="projects-grid">
 
       <!-- Bowling Tournament -->
-      <div class="project-card" data-link="https://github.com/LMT2004/BowlingTournamentProject">
+      <div class="project-card">
         <h3>Bowling Tournament Project</h3>
         <p>
           NBCC Project, ASP.Net MVC application using a SQLite database to manage
@@ -121,40 +121,39 @@
 
       <!-- Daily Sci-Fi Name Game -->
       <div class="project-card"
-     data-link="https://github.com/LMT2004/BenQuadrinardle">
+           data-link="https://github.com/LMT2004/BenQuadrinardle">
 
-  <h3>Daily Sci-Fi Name Game</h3>
+        <h3>Daily Sci-Fi Name Game</h3>
 
-  <p>
-    Personal project inspired by NYT Wordle. Used AI, a Node script,
-    and my name generator to build a JSON file of obscure Star Wars
-    characters as well as randomly generated names for a daily game.
-  </p>
+        <p>
+          Personal project inspired by NYT Wordle. Used AI, a Node script,
+          and my name generator to build a JSON file of obscure Star Wars
+          characters as well as randomly generated names for a daily game.
+        </p>
 
-  <!-- NEW FOOTER WRAPPER -->
-  <div class="project-footer">
+        <div class="project-footer">
 
-    <div class="project-logos-small">
-      <img src="logos/js.png" alt="JavaScript">
-      <img src="logos/html.png" alt="HTML">
-      <img src="logos/css.png" alt="CSS">
-      <img src="logos/node.png" alt="Node">
-    </div>
+          <div class="project-logos-small">
+            <img src="logos/js.png" alt="JavaScript">
+            <img src="logos/html.png" alt="HTML">
+            <img src="logos/css.png" alt="CSS">
+            <img src="logos/node.png" alt="Node">
+          </div>
 
-    <div class="project-actions">
-      <a href="https://lmt2004.github.io/BenQuadrinardle/"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="live-demo-btn">
-         Live Demo
-      </a>
-    </div>
+          <div class="project-actions">
+            <a href="https://lmt2004.github.io/BenQuadrinardle/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="live-demo-btn">
+               Live Demo
+            </a>
+          </div>
 
-  </div>
-</div>
+        </div>
+      </div>
 
       <!-- PHP Social Media -->
-      <div class="project-card" data-link="https://github.com/LMT2004/PHPSocialMedia">
+      <div class="project-card">
         <h3>PHP Social Media</h3>
         <p>
           NBCC PHP Project. Simple social media website, similar to X.
@@ -172,7 +171,7 @@
       </div>
 
       <!-- Selenium Demo -->
-      <div class="project-card" data-link="https://github.com/LMT2004/seleniumDemo">
+      <div class="project-card">
         <h3>Selenium Demo</h3>
         <p>
           NBCC project coded in Java using Selenium to demonstrate
@@ -188,10 +187,10 @@
       </div>
 
       <!-- Web Countries -->
-      <div class="project-card" data-link="https://github.com/LMT2004/WebCountriesProject">
+      <div class="project-card">
         <h3>Web Countries Project</h3>
         <p>
-          Year one responsive web design project at NBCC,
+          NBCC Year one responsive web design project,
           demonstrating various HTML, CSS, and Bootstrap features.
           Made in Visual Studio Code by Sebastian Santos and I.
         </p>
@@ -207,7 +206,7 @@
       </div>
 
     </div>
-  </div>
+</div>
 
 <div class="content">
   <div class="profile-header">
@@ -243,12 +242,15 @@
   </div>
 </div>
   <script>
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.addEventListener('click', () => {
-        window.open(card.dataset.link, '_blank');
-      });
-    });
+    document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const link = card.dataset.link;
 
+    if (!link) return; // ⛔ Do nothing for NBCC projects
+
+    window.open(link, "_blank");
+  });
+});
     document.querySelectorAll('.live-demo-btn').forEach(button => {
       button.addEventListener('click', e => {
         e.stopPropagation();
